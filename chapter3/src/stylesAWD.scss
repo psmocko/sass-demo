@@ -25,25 +25,44 @@
         width: 320px;
         padding: 0;
     }
-    .grid-12 {
-        // header and footer
-        width: 97.91%;        
-    }    
-    .grid-3 {
-        width: 22.91%;
-        @include forSmallScreens(640px) {
-            height: 50px;
+    .grid-12 { 
+        // Header and footer sections
+        @include forSmallScreens(980px) {
+            width: 728px;
         }
-
+        @include forSmallScreens(768px) {
+            width: 600px;
+        }
+    }
+    .grid-3 { 
+        // nav section
+        @include forSmallScreens(980px) {
+            width: 200px;
+        }
+        @include forSmallScreens(768px) {
+            width: 160px;
+        }
     }
     .grid-9 {
-        width: 72.91%;
+        // content section
+        @include forSmallScreens(980px) {
+            width: 508px;
+        }
+        @include forSmallScreens(768px) {
+            width: 420px;
+        }        
     }
-    .grid-3, .grid-9,  { //Nav and content 
+    .grid-3,
+    .grid-9,
+    .grid-12 {
         @include forSmallScreens(640px) {
-            width: 97.91%;
+            width: 440px;
+        }
+        @include forSmallScreens(480px) {
+            width: 300px;            
         }
     }
+        
 }
 header { background: #429032; }
 nav { background: #2963BD; }
